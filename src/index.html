@@ -4,34 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./dist/fontawesome/css/all.min.css" />
+
     <script defer src="./dist/alpinejs@3.10.5/alpinejs.min.js"></script>
   </head>
   <body>
     <div class="container mx-auto">
-      <header class="p-6 shadow-sm bg-orange-200">
+      <header
+        class="p-6 shadow-sm text-base font-semibold text-slate-900 lg:dark:text-slate-800"
+      >
+        <!-- navbar -->
         <nav class="flex justify-between">
+          <!-- brand -->
           <a href="./index.html">APP Name</a>
 
-          <div
-            x-data="{ mobileMenuOpen: false }"
-            @click.outside="mobileMenuOpen = false"
-          >
-            <button
-              type="button"
-              class="block lg:hidden bg-blue-400"
-              @click="mobileMenuOpen = !mobileMenuOpen"
-            >
-              =
-            </button>
+          <!-- menu wrapper for mobile menu -->
+          <div x-data="{ mobileMenuOpen: false }">
+            <!-- mobile menu toggle button -->
+            <div class="block lg:hidden">
+              <i
+                class="fa-solid fa-bars hover:cursor-pointer"
+                @click="mobileMenuOpen = !mobileMenuOpen"
+              ></i>
+            </div>
+
+            <!-- mobile menu display blur wrapper -->
+            <div
+              class="min-h-screen w-full fixed top-0 left-0 z-10 lg:hidden bg-black/20 backdrop-blur-sm dark:bg-slate-900/80"
+              :class="{ 'hidden' : !mobileMenuOpen }"
+              @click="mobileMenuOpen = false"
+            ></div>
+
+            <!-- main header menu -->
             <ul
               class="lg:flex"
-              :class="{ 'hidden' : !mobileMenuOpen, 'fixed lg:relative top-0 right-0 z-50 bg-slate-400 lg:bg-inherit min-h-screen lg:min-h-0' : mobileMenuOpen }"
+              :class="{ 'hidden' : !mobileMenuOpen, 'fixed lg:relative top-4 lg:top-0 right-4 lg:right-0 z-50 bg-white lg:bg-inherit p-6 lg:p-0 shadow-lg lg:shadow-none rounded-lg lg:rounded-none w-full max-w-xs dark:bg-slate-800 dark:highlight-white/5 dark:text-slate-400' : mobileMenuOpen }"
             >
-              <li><a href="#" class="p-2">Documentation</a></li>
-              <li x-data="{ open: false }" @click.outside="open = false">
-                <a href="#" @click="open = !open">Templates</a>
+              <!-- menu close button for mobile -->
+              <li class="block lg:hidden fixed top-6 right-8">
+                <i
+                  class="fa-solid fa-xmark hover:cursor-pointer"
+                  @click="mobileMenuOpen = false"
+                ></i>
+
+                <!-- main menu links -->
+              </li>
+              <li class="pb-3 lg:pb-0">
+                <a href="#" class="p-2">Documentation</a>
+              </li>
+              <!-- dropdown menu link -->
+              <li
+                class="pb-3 lg:pb-0"
+                x-data="{ open: false }"
+                @click.outside="open = false"
+              >
+                <a href="#" @click="open = !open" class="p-2">Templates</a>
+                <!-- dropdown menu -->
                 <ul
-                  class="bg-black text-white p-2 rounded lg:absolute z-0 lg:z-50"
+                  class="bg-slate-800 dark:bg-slate-200 dark:highlight-white/5 text-white/80 dark:text-black p-2 ml-2 rounded lg:absolute z-0 lg:z-50"
                   x-show="open"
                 >
                   <li><a href="#" class="block mb-2">Admin</a></li>
@@ -39,26 +69,19 @@
                 </ul>
               </li>
 
-              <li><a href="#" class="p-2">Blog</a></li>
+              <li class="pb-3 lg:pb-0"><a href="#" class="p-2">Blog</a></li>
             </ul>
           </div>
         </nav>
       </header>
 
       <section class="p-5">
-        <ul class="flex">
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li x-data="{ open: false }" @click.outside="open = false">
-            <a href="#" @click="open = !open">Templates</a>
-            <ul class="bg-black text-white p-2 rounded" x-show="open">
-              <li><a href="#" class="block mb-2">Admin</a></li>
-              <li><a href="#" class="block">Frontend</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Link 3</a></li>
-          <li><a href="#">Link 4</a></li>
-        </ul>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, odio
+          voluptatibus, perspiciatis quisquam cupiditate ipsum minima minus qui
+          explicabo voluptatem animi tenetur voluptates a quaerat autem
+          deserunt? Rem, repellat excepturi.
+        </p>
       </section>
     </div>
   </body>
