@@ -7,41 +7,59 @@
     <script defer src="./dist/alpinejs@3.10.5/alpinejs.min.js"></script>
   </head>
   <body>
-    <header class="p-6 shadow-sm">
-      <nav class="flex justify-between">
-        <a href="./index.html">APP Name</a>
-        <ul class="hidden md:flex">
-          <li><a href="#" class="p-2">Documentation</a></li>
-          <li x-data="{ open: false }" @click.outside="open = false">
-            <a href="#" @click="open = !open" class="relative">Templates</a>
-            <ul
-              class="absolute z-50 bg-black text-white p-2 rounded"
-              x-show="open"
+    <div class="container mx-auto">
+      <header class="p-6 shadow-sm bg-orange-200">
+        <nav class="flex justify-between">
+          <a href="./index.html">APP Name</a>
+
+          <div
+            x-data="{ mobileMenuOpen: false }"
+            @click.outside="mobileMenuOpen = false"
+          >
+            <button
+              type="button"
+              class="block lg:hidden bg-blue-400"
+              @click="mobileMenuOpen = !mobileMenuOpen"
             >
+              =
+            </button>
+            <ul
+              class="lg:flex"
+              :class="{ 'hidden' : !mobileMenuOpen, 'fixed lg:relative top-0 right-0 z-50 bg-slate-400 lg:bg-inherit min-h-screen lg:min-h-0' : mobileMenuOpen }"
+            >
+              <li><a href="#" class="p-2">Documentation</a></li>
+              <li x-data="{ open: false }" @click.outside="open = false">
+                <a href="#" @click="open = !open">Templates</a>
+                <ul
+                  class="bg-black text-white p-2 rounded lg:absolute z-0 lg:z-50"
+                  x-show="open"
+                >
+                  <li><a href="#" class="block mb-2">Admin</a></li>
+                  <li><a href="#" class="block">Frontend</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#" class="p-2">Blog</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <section class="p-5">
+        <ul class="flex">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li x-data="{ open: false }" @click.outside="open = false">
+            <a href="#" @click="open = !open">Templates</a>
+            <ul class="bg-black text-white p-2 rounded" x-show="open">
               <li><a href="#" class="block mb-2">Admin</a></li>
               <li><a href="#" class="block">Frontend</a></li>
             </ul>
           </li>
-
-          <li><a href="#" class="p-2">Blog</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
         </ul>
-      </nav>
-    </header>
-
-    <section class="p-5">
-      <ul class="flex">
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li x-data="{ open: false }" @click.outside="open = false">
-          <a href="#" @click="open = !open">Templates</a>
-          <ul class="bg-black text-white p-2 rounded" x-show="open">
-            <li><a href="#" class="block mb-2">Admin</a></li>
-            <li><a href="#" class="block">Frontend</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Link 3</a></li>
-        <li><a href="#">Link 4</a></li>
-      </ul>
-    </section>
+      </section>
+    </div>
   </body>
 </html>
