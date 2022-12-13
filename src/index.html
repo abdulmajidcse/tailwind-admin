@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <script defer src="./dist/alpinejs@3.10.5/alpinejs.min.js"></script>
+  </head>
+  <body>
+    <header class="p-6 shadow-sm">
+      <nav class="flex justify-between">
+        <a href="./index.html">APP Name</a>
+        <ul class="hidden md:flex">
+          <li><a href="#" class="p-2">Documentation</a></li>
+          <li x-data="{ open: false }" @click.outside="open = false">
+            <a href="#" @click="open = !open" class="relative">Templates</a>
+            <ul
+              class="absolute z-50 bg-black text-white p-2 rounded"
+              x-show="open"
+            >
+              <li><a href="#" class="block mb-2">Admin</a></li>
+              <li><a href="#" class="block">Frontend</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#" class="p-2">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="p-5">
+      <ul class="flex">
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li x-data="{ open: false }" @click.outside="open = false">
+          <a href="#" @click="open = !open">Templates</a>
+          <ul class="bg-black text-white p-2 rounded" x-show="open">
+            <li><a href="#" class="block mb-2">Admin</a></li>
+            <li><a href="#" class="block">Frontend</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+      </ul>
+    </section>
+  </body>
+</html>
