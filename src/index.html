@@ -8,110 +8,108 @@
 
     <script defer src="./dist/alpinejs@3.10.5/alpinejs.min.js"></script>
   </head>
-  <body>
-    <div class="container mx-auto">
-      <header
-        class="p-6 shadow-sm text-base font-semibold text-slate-900 lg:dark:text-slate-800"
-      >
-        <!-- navbar -->
-        <nav class="flex justify-between">
-          <!-- brand -->
-          <a href="./index.html">APP Name</a>
+  <body
+    class="antialiased dark:bg-slate-800 dark:highlight-white/5 dark:text-slate-400"
+  >
+    <header
+      class="py-6 px-4 text-base font-semibold border-b border-slate-900/10 dark:border-slate-300/10"
+    >
+      <!-- navbar -->
+      <nav class="flex justify-between container mx-auto">
+        <!-- brand -->
+        <a href="./index.html">APP Name</a>
 
-          <!-- menu wrapper for mobile menu -->
-          <div x-data="{ mobileMenuOpen: false }">
-            <!-- mobile menu toggle button -->
-            <div class="block lg:hidden">
-              <i
-                class="fa-solid fa-bars hover:cursor-pointer"
-                @click="mobileMenuOpen = !mobileMenuOpen"
-              ></i>
-            </div>
-
-            <!-- mobile menu display blur wrapper -->
-            <div
-              class="min-h-screen w-full fixed top-0 left-0 z-10 lg:hidden bg-black/20 backdrop-blur-sm dark:bg-slate-900/80"
-              :class="{ 'hidden' : !mobileMenuOpen }"
-              @click="mobileMenuOpen = false"
-            ></div>
-
-            <!-- main header menu -->
-            <ul
-              class="lg:flex"
-              :class="{ 'hidden' : !mobileMenuOpen, 'fixed lg:relative top-4 lg:top-0 right-4 lg:right-0 z-50 bg-white lg:bg-inherit p-6 lg:p-0 shadow-lg lg:shadow-none rounded-lg lg:rounded-none w-full max-w-xs dark:bg-slate-800 dark:highlight-white/5 dark:text-slate-400' : mobileMenuOpen }"
-            >
-              <!-- menu close button for mobile -->
-              <li class="block lg:hidden fixed top-6 right-8">
-                <i
-                  class="fa-solid fa-xmark hover:cursor-pointer"
-                  @click="mobileMenuOpen = false"
-                ></i>
-
-                <!-- main menu links -->
-              </li>
-              <li class="pb-3 lg:pb-0">
-                <a href="#" class="p-2">Documentation</a>
-              </li>
-              <!-- dropdown menu link -->
-              <li
-                class="pb-3 lg:pb-0"
-                x-data="{ open: false }"
-                @click.outside="open = false"
-              >
-                <a href="#" @click="open = !open" class="p-2">Templates</a>
-                <!-- dropdown menu -->
-                <ul
-                  class="bg-slate-800 dark:bg-slate-200 dark:highlight-white/5 text-white/80 dark:text-black p-2 ml-2 rounded lg:absolute z-0 lg:z-50 min-w-fit"
-                  x-show="open"
-                >
-                  <li><a href="#" class="block mb-2">Admin</a></li>
-                  <li><a href="#" class="block">Frontend</a></li>
-                </ul>
-              </li>
-
-              <li class="pb-3 lg:pb-0"><a href="#" class="p-2">Blog</a></li>
-              <li class="pb-3 lg:pb-0">
-                <span class="p-2">
-                  <span
-                    class="theme-icon"
-                    id="switch_to_dark_theme"
-                    title="Switch to dark mode"
-                    role="button"
-                    onclick="setTheme('dark')"
-                    ><i class="fas fa-adjust"></i
-                  ></span>
-                  <span
-                    class="theme-icon"
-                    id="switch_to_system_theme"
-                    title="Switch to system mode"
-                    role="button"
-                    onclick="setTheme('system')"
-                    ><i class="fas fa-sun"></i
-                  ></span>
-                  <span
-                    class="theme-icon"
-                    id="switch_to_light_theme"
-                    title="Switch to light mode"
-                    role="button"
-                    onclick="setTheme('light')"
-                    ><i class="fas fa-moon"></i
-                  ></span>
-                </span>
-              </li>
-            </ul>
+        <!-- menu wrapper for mobile menu -->
+        <div x-data="{ mobileMenuOpen: false }">
+          <!-- mobile menu toggle button -->
+          <div class="block lg:hidden">
+            <i
+              class="fa-solid fa-bars hover:cursor-pointer"
+              @click="mobileMenuOpen = !mobileMenuOpen"
+            ></i>
           </div>
-        </nav>
-      </header>
 
-      <section class="p-5">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, odio
-          voluptatibus, perspiciatis quisquam cupiditate ipsum minima minus qui
-          explicabo voluptatem animi tenetur voluptates a quaerat autem
-          deserunt? Rem, repellat excepturi.
-        </p>
-      </section>
-    </div>
+          <!-- mobile menu display blur wrapper -->
+          <div
+            class="min-h-screen w-full fixed top-0 left-0 z-10 lg:hidden bg-black/20 backdrop-blur-sm dark:bg-slate-900/80"
+            :class="{ 'hidden' : !mobileMenuOpen }"
+            @click="mobileMenuOpen = false"
+          ></div>
+
+          <!-- main header menu -->
+          <ul
+            class="lg:flex"
+            :class="{ 'hidden' : !mobileMenuOpen, 'fixed lg:relative top-4 lg:top-0 right-4 lg:right-0 z-50 bg-white lg:bg-inherit p-6 lg:p-0 shadow-lg lg:shadow-none rounded-lg lg:rounded-none w-full max-w-xs dark:bg-slate-800 dark:highlight-white/5 dark:text-slate-400' : mobileMenuOpen }"
+          >
+            <!-- menu close button for mobile -->
+            <li class="block lg:hidden fixed top-6 right-8">
+              <i
+                class="fa-solid fa-xmark hover:cursor-pointer"
+                @click="mobileMenuOpen = false"
+              ></i>
+
+              <!-- main menu links -->
+            </li>
+            <li class="pb-3 lg:pb-0">
+              <a href="#" class="p-2">Documentation</a>
+            </li>
+            <!-- dropdown menu link -->
+            <li
+              class="pb-3 lg:pb-0"
+              x-data="{ open: false }"
+              @click.outside="open = false"
+            >
+              <a href="#" @click="open = !open" class="p-2">Templates</a>
+              <!-- dropdown menu -->
+              <ul
+                class="bg-slate-800 dark:bg-slate-200 dark:highlight-white/5 text-white/80 dark:text-black p-2 ml-2 rounded lg:absolute z-0 lg:z-50 min-w-fit mt-2 lg:mt-4"
+                x-show="open"
+              >
+                <li><a href="#" class="block mb-2">Admin</a></li>
+                <li><a href="#" class="block">Frontend</a></li>
+              </ul>
+            </li>
+
+            <li class="pb-3 lg:pb-0"><a href="#" class="p-2">Blog</a></li>
+            <li class="pb-3 lg:pb-0">
+              <span
+                class="theme-icon p-2"
+                id="switch_to_dark_theme"
+                title="Switch to dark mode"
+                role="button"
+                onclick="setTheme('dark')"
+                ><i class="fas fa-adjust"></i
+              ></span>
+              <span
+                class="theme-icon p-2"
+                id="switch_to_system_theme"
+                title="Switch to system mode"
+                role="button"
+                onclick="setTheme('system')"
+                ><i class="fas fa-sun"></i
+              ></span>
+              <span
+                class="theme-icon p-2"
+                id="switch_to_light_theme"
+                title="Switch to light mode"
+                role="button"
+                onclick="setTheme('light')"
+                ><i class="fas fa-moon"></i
+              ></span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="container mx-auto pt-4 px-4 lg:px-0">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, odio
+        voluptatibus, perspiciatis quisquam cupiditate ipsum minima minus qui
+        explicabo voluptatem animi tenetur voluptates a quaerat autem deserunt?
+        Rem, repellat excepturi.
+      </p>
+    </section>
 
     <script src="./dist/js/theme.js"></script>
   </body>
