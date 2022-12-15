@@ -61,7 +61,7 @@
                 <a href="#" @click="open = !open" class="p-2">Templates</a>
                 <!-- dropdown menu -->
                 <ul
-                  class="bg-slate-800 dark:bg-slate-200 dark:highlight-white/5 text-white/80 dark:text-black p-2 ml-2 rounded lg:absolute z-0 lg:z-50"
+                  class="bg-slate-800 dark:bg-slate-200 dark:highlight-white/5 text-white/80 dark:text-black p-2 ml-2 rounded lg:absolute z-0 lg:z-50 min-w-fit"
                   x-show="open"
                 >
                   <li><a href="#" class="block mb-2">Admin</a></li>
@@ -70,6 +70,34 @@
               </li>
 
               <li class="pb-3 lg:pb-0"><a href="#" class="p-2">Blog</a></li>
+              <li class="pb-3 lg:pb-0">
+                <span class="p-2">
+                  <span
+                    class="theme-icon"
+                    id="switch_to_dark_theme"
+                    title="Switch to dark mode"
+                    role="button"
+                    onclick="setTheme('dark')"
+                    ><i class="fas fa-adjust"></i
+                  ></span>
+                  <span
+                    class="theme-icon"
+                    id="switch_to_system_theme"
+                    title="Switch to system mode"
+                    role="button"
+                    onclick="setTheme('system')"
+                    ><i class="fas fa-sun"></i
+                  ></span>
+                  <span
+                    class="theme-icon"
+                    id="switch_to_light_theme"
+                    title="Switch to light mode"
+                    role="button"
+                    onclick="setTheme('light')"
+                    ><i class="fas fa-moon"></i
+                  ></span>
+                </span>
+              </li>
             </ul>
           </div>
         </nav>
@@ -84,5 +112,55 @@
         </p>
       </section>
     </div>
+
+    <script>
+      // theme style switch
+      function switchThemeStyles(theme) {
+        if (theme == "dark") {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+
+      // set theme
+      function setTheme(theme) {
+        if (theme) {
+          localStorage.setItem("theme", theme);
+        } else if (!localStorage.getItem("theme")) {
+          localStorage.setItem("theme", "system");
+        }
+
+        // all theme icon button hidden
+        document.querySelectorAll(".theme-icon").forEach((themeIcon) => {
+          themeIcon.classList.add("hidden");
+        });
+
+        if (localStorage.getItem("theme") == "system") {
+          document
+            .getElementById("switch_to_dark_theme")
+            .classList.remove("hidden");
+
+          if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            switchThemeStyles("dark");
+          } else {
+            switchThemeStyles("light");
+          }
+        } else if (localStorage.getItem("theme") === "dark") {
+          document
+            .getElementById("switch_to_light_theme")
+            .classList.remove("hidden");
+          switchThemeStyles("dark");
+        } else {
+          document
+            .getElementById("switch_to_system_theme")
+            .classList.remove("hidden");
+          switchThemeStyles("light");
+        }
+      }
+
+      // when page load
+      window.onload = (event) => setTheme();
+    </script>
   </body>
 </html>
