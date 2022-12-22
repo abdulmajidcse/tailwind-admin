@@ -630,6 +630,10 @@ video {
   right: auto;
 }
 
+.-left-\[20rem\] {
+  left: -20rem;
+}
+
 .z-40 {
   z-index: 40;
 }
@@ -1355,6 +1359,14 @@ video {
 
   .lg\:right-0 {
     right: 0px;
+  }
+
+  .lg\:left-0 {
+    left: 0px;
+  }
+
+  .lg\:-left-\[20rem\] {
+    left: -20rem;
   }
 
   .lg\:z-50 {
