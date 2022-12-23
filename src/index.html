@@ -214,9 +214,9 @@
               <li>
                 <a
                   href="#"
-                  class="group flex items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-sky-500 dark:text-sky-400"
+                  class="group flex items-center lg:leading-6 mb-4 text-sky-500 dark:text-sky-400 hover:text-slate-900 dark:hover:text-slate-300 text-base"
                   ><div
-                    class="mr-4 rounded-md ring-1 ring-slate-900/5 shadow-sm group-hover:shadow group-hover:ring-slate-900/10 dark:ring-0 dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-sky-200 dark:group-hover:bg-sky-500 dark:bg-sky-500 dark:highlight-white/10"
+                    class="mr-4 shadow-sm group-hover:shadow dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-sky-200 dark:highlight-white/10"
                   >
                     <i class="fas fa-th"></i>
                   </div>
@@ -226,33 +226,57 @@
               <li>
                 <a
                   href="#"
-                  class="group flex items-center lg:text-sm lg:leading-6 mb-4 font-medium text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
+                  class="group flex items-center lg:leading-6 mb-4 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300 text-base"
                   ><div
-                    class="mr-4 rounded-md ring-1 ring-slate-900/5 shadow-sm group-hover:shadow group-hover:ring-slate-900/10 dark:ring-0 dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-indigo-200 dark:group-hover:bg-indigo-500 dark:bg-slate-800 dark:highlight-white/5"
+                    class="mr-4 shadow-sm group-hover:shadow dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-indigo-200 dark:highlight-white/5"
                   >
                     <i class="fas fa-copy"></i>
                   </div>
                   Category</a
                 >
               </li>
-              <li>
+              <li x-data="{ open: false }">
                 <a
                   href="#"
-                  class="group flex items-center lg:text-sm lg:leading-6 mb-4 font-medium text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                  ><div
-                    class="mr-4 rounded-md ring-1 ring-slate-900/5 shadow-sm group-hover:shadow group-hover:ring-slate-900/10 dark:ring-0 dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-fuchsia-200 dark:group-hover:bg-fuchsia-600 dark:bg-slate-800 dark:highlight-white/5"
+                  class="group flex items-center lg:leading-6 mb-4 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300 text-base relative"
+                  @click="open = !open"
+                >
+                  <div
+                    class="mr-4 shadow-sm group-hover:shadow dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-fuchsia-200 dark:highlight-white/5"
                   >
                     <i class="fas fa-copy"></i>
                   </div>
-                  Pages</a
+                  Pages
+                  <i
+                    class="fas fa-angle-left absolute right-0"
+                    :class="{ '-rotate-90' : open }"
+                  ></i>
+                </a>
+                <!-- dropdown menu -->
+                <ul
+                  class="bg-slate-800 dark:bg-slate-200 dark:highlight-white/5 text-white/80 dark:text-black p-2 rounded my-2"
+                  x-show="open"
                 >
+                  <li
+                    class="border-b border-slate-500 dark:border-slate-900/10"
+                  >
+                    <a href="#" class="block mb-2 px-2 py-1">
+                      <i class="fa-solid fa-user"></i> Blank
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-2 py-1">
+                      <i class="fa-solid fa-lock"></i> Register
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a
                   href="#"
-                  class="group flex items-center lg:text-sm lg:leading-6 mb-4 font-medium text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
+                  class="group flex items-center lg:leading-6 mb-4 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300 text-base"
                   ><div
-                    class="mr-4 rounded-md ring-1 ring-slate-900/5 shadow-sm group-hover:shadow group-hover:ring-slate-900/10 dark:ring-0 dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-pink-200 dark:group-hover:bg-pink-500 dark:bg-slate-800 dark:highlight-white/5"
+                    class="mr-4 shadow-sm group-hover:shadow dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-pink-200 dark:highlight-white/5"
                   >
                     <i class="fas fa-users"></i>
                   </div>
