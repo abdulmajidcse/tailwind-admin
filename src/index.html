@@ -19,7 +19,10 @@
         <nav class="flex justify-between mx-1">
           <!-- brand -->
           <div>
-            <a href="./index.html">APP Name</a>
+            <a href="./index.html" title="APP Name"
+              ><i class="fas fa-th text-lg"></i>
+              <span class="hidden sm:inline-block">APP Name</span></a
+            >
           </div>
 
           <!-- menu wrapper for mobile menu -->
@@ -183,7 +186,7 @@
           :class="$store.sidebar.openIs ? 'lg:left-0' : '-left-[20rem]'"
         >
           <nav class="lg:text-sm lg:leading-6 relative">
-            <div class="sticky top-0 -ml-0.5 pointer-events-none">
+            <div class="pointer-events-none">
               <div class="pointer-events-auto py-7">
                 <div class="mb-4 ml-1">
                   <a
@@ -263,7 +266,7 @@
         <div :class="{'lg:pl-[16rem]' : $store.sidebar.openIs}">
           <main class="pt-5">
             <!-- main content header -->
-            <div class="flex justify-between mb-10">
+            <div class="md:flex md:justify-between mb-10">
               <div>
                 <h1
                   class="text-3xl sm:text-4xl text-slate-900 tracking-tight dark:text-slate-200"
@@ -271,7 +274,7 @@
                   Dashboard
                 </h1>
               </div>
-              <div>
+              <div class="mt-3 md:mt-0">
                 <ol class="flex">
                   <li><a href="#" class="text-blue-500">Home</a></li>
                   <li class="text-slate-500">
