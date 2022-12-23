@@ -15,13 +15,10 @@ function setTheme(theme) {
     localStorage.setItem("theme", "system");
   }
 
-  // all theme icon button hidden
-  document.querySelectorAll(".theme-icon").forEach((themeIcon) => {
-    themeIcon.classList.add("hidden");
-  });
+  const themeMenu = document.getElementById("theme_menu");
 
   if (localStorage.getItem("theme") == "system") {
-    document.getElementById("switch_to_dark_theme").classList.remove("hidden");
+    themeMenu.innerHTML = `<i class="fas fa-adjust"></i> System`;
 
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       switchThemeStyles("dark");
@@ -29,12 +26,10 @@ function setTheme(theme) {
       switchThemeStyles("light");
     }
   } else if (localStorage.getItem("theme") === "dark") {
-    document.getElementById("switch_to_light_theme").classList.remove("hidden");
+    themeMenu.innerHTML = `<i class="fas fa-moon"></i> Dark`;
     switchThemeStyles("dark");
   } else {
-    document
-      .getElementById("switch_to_system_theme")
-      .classList.remove("hidden");
+    themeMenu.innerHTML = `<i class="fas fa-sun"></i> Light`;
     switchThemeStyles("light");
   }
 }

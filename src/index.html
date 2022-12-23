@@ -72,14 +72,16 @@
               <!-- menu close button for mobile -->
               <li class="block lg:hidden fixed top-6 right-8">
                 <i
-                  class="fa-solid fa-xmark hover:cursor-pointer"
+                  class="fa-solid fa-xmark cursor-pointer"
                   @click="mobileMenuOpen = false"
                 ></i>
 
                 <!-- main menu links -->
               </li>
               <li class="pb-3 lg:pb-0">
-                <a href="#" class="p-2">Documentation</a>
+                <a href="#" class="p-2"
+                  ><i class="fa-solid fa-message"></i> Messages</a
+                >
               </li>
               <!-- dropdown menu link -->
               <li
@@ -87,43 +89,80 @@
                 x-data="{ open: false }"
                 @click.outside="open = false"
               >
-                <a href="#" @click="open = !open" class="p-2">Templates</a>
+                <a href="#" @click="open = !open" class="p-2">
+                  <i class="fa-solid fa-user-circle"></i> Profile</a
+                >
                 <!-- dropdown menu -->
                 <ul
                   class="bg-slate-800 dark:bg-slate-200 dark:highlight-white/5 text-white/80 dark:text-black p-2 ml-2 rounded lg:absolute z-0 lg:z-50 min-w-fit mt-2 lg:mt-4"
                   x-show="open"
                 >
-                  <li><a href="#" class="block mb-2">Admin</a></li>
-                  <li><a href="#" class="block">Frontend</a></li>
+                  <li
+                    class="border-b border-slate-500 dark:border-slate-900/10"
+                  >
+                    <a href="#" class="block mb-2 px-2 py-1">
+                      <i class="fa-solid fa-user"></i> Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-2 py-1">
+                      <i class="fa-solid fa-lock"></i> Log Out
+                    </a>
+                  </li>
                 </ul>
               </li>
 
-              <li class="pb-3 lg:pb-0"><a href="#" class="p-2">Blog</a></li>
-              <li class="pb-3 lg:pb-0">
-                <span
-                  class="theme-icon p-2"
-                  id="switch_to_dark_theme"
-                  title="Switch to dark mode"
-                  role="button"
-                  onclick="setTheme('dark')"
-                  ><i class="fas fa-adjust"></i
-                ></span>
-                <span
-                  class="theme-icon p-2"
-                  id="switch_to_system_theme"
-                  title="Switch to system mode"
-                  role="button"
-                  onclick="setTheme('system')"
-                  ><i class="fas fa-sun"></i
-                ></span>
-                <span
-                  class="theme-icon p-2"
-                  id="switch_to_light_theme"
-                  title="Switch to light mode"
-                  role="button"
-                  onclick="setTheme('light')"
-                  ><i class="fas fa-moon"></i
-                ></span>
+              <!-- dropdown menu link -->
+              <li class="pb-3 lg:pb-0" x-data="{ open: false }" title="Theme">
+                <a
+                  href="#"
+                  @click="open = !open"
+                  @click.outside="open = false"
+                  class="p-2"
+                  id="theme_menu"
+                >
+                  <i class="fas fa-adjust"></i> System
+                </a>
+                <!-- dropdown menu -->
+                <ul
+                  class="bg-slate-800 dark:bg-slate-200 dark:highlight-white/5 text-white/80 dark:text-black p-2 ml-2 rounded lg:absolute z-0 lg:z-50 min-w-fit mt-2 lg:mt-4 lg:w-20 lg:right-1"
+                  x-show="open"
+                >
+                  <li
+                    class="border-b border-slate-500 dark:border-slate-900/10"
+                  >
+                    <a
+                      href="#"
+                      class="block mb-2 px-2 py-1"
+                      title="Switch to system mode"
+                      onclick="setTheme('system')"
+                    >
+                      <i class="fas fa-adjust"></i> System
+                    </a>
+                  </li>
+                  <li
+                    class="border-b border-slate-500 dark:border-slate-900/10"
+                  >
+                    <a
+                      href="#"
+                      class="block px-2 py-1"
+                      title="Switch to dark mode"
+                      onclick="setTheme('dark')"
+                    >
+                      <i class="fas fa-moon"></i> Dark
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-2 py-1"
+                      title="Switch to light mode"
+                      onclick="setTheme('light')"
+                    >
+                      <i class="fas fa-sun"></i> Light
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -148,8 +187,13 @@
             <div class="sticky top-0 -ml-0.5 pointer-events-none">
               <div class="pointer-events-auto py-7">
                 <div class="mb-4 ml-1">
-                  <a href="#" class="flex py-2 border-b border-slate-900/10 dark:border-slate-300/10">
-                    <span class="shadow-2xl"><i class="fa-solid fa-user-circle text-2xl mr-2"></i></span>
+                  <a
+                    href="#"
+                    class="flex py-2 border-b border-slate-900/10 dark:border-slate-300/10"
+                  >
+                    <span class="shadow-2xl"
+                      ><i class="fa-solid fa-user-circle text-2xl mr-2"></i
+                    ></span>
                     <span class="font-semibold pb-3">Administrator</span>
                   </a>
                 </div>
