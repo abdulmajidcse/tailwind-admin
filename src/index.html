@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html
-  class="scrollbar-thin scrollbar-thumb-purple-500 scrollbar-track-slate-400"
->
+<html class="scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-slate-400">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -184,7 +182,7 @@
         ></div>
 
         <div
-          class="fixed z-20 inset-0 top-[3.8125rem] right-auto w-[17rem] pb-10 px-4 overflow-y-auto bg-white dark:bg-inherit border-r border-slate-900/10 dark:border-slate-300/10 shadow-2xl transition-all duration-300 scrollbar-thin scrollbar-thumb-purple-500 scrollbar-track-slate-400"
+          class="fixed z-20 inset-0 top-[3.8125rem] right-auto w-[17rem] pb-10 px-4 overflow-y-auto bg-white dark:bg-inherit border-r border-slate-900/10 dark:border-slate-300/10 shadow-2xl transition-all duration-300 scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-slate-400"
           :class="$store.sidebar.openIs ? 'lg:left-0' : '-left-[20rem]'"
         >
           <nav class="lg:text-sm lg:leading-6 relative">
@@ -218,7 +216,7 @@
               <li class="mb-1">
                 <a
                   href="#"
-                  class="group flex items-center lg:leading-6 text-white text-base bg-purple-500 rounded p-2"
+                  class="group flex items-center lg:leading-6 text-white text-base bg-blue-500 rounded p-2"
                   ><div class="mr-2 shadow-sm dark:highlight-white/10">
                     <i class="fas fa-th"></i>
                   </div>
@@ -360,6 +358,8 @@
               </h2>
 
               <div class="mb-16 prose prose-slate dark:prose-dark">
+                  <input type="text" name="name" placeholder="Search here..." class="w-full" />
+
                 <div class="overflow-x-auto shadow-sm my-8">
                   <table class="border-collapse table-auto w-full">
                     <thead>
