@@ -182,7 +182,7 @@
         ></div>
 
         <div
-          class="fixed z-20 inset-0 top-[3.8125rem] right-auto w-[17rem] pb-10 px-4 overflow-y-auto bg-white dark:bg-inherit border-r border-slate-900/10 dark:border-slate-300/10 shadow-2xl"
+          class="fixed z-20 inset-0 top-[3.8125rem] right-auto w-[17rem] pb-10 px-4 overflow-y-auto bg-white dark:bg-inherit border-r border-slate-900/10 dark:border-slate-300/10 shadow-2xl transition-all ease-in-out delay-150 duration-300"
           :class="$store.sidebar.openIs ? 'lg:left-0' : '-left-[20rem]'"
         >
           <nav class="lg:text-sm lg:leading-6 relative">
@@ -324,7 +324,10 @@
           </nav>
         </div>
 
-        <div :class="{'lg:pl-[17rem]' : $store.sidebar.openIs}">
+        <div
+          class="transition-all ease-in-out delay-150 duration-300"
+          :class="{'lg:pl-[17rem]' : $store.sidebar.openIs}"
+        >
           <main class="pt-5">
             <!-- main content header -->
             <div class="md:flex md:justify-between mb-10">
