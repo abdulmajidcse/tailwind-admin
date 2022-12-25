@@ -175,28 +175,26 @@
           :class="$store.sidebar.openIs ? 'lg:left-0' : '-left-[20rem]'"
         >
           <nav class="lg:text-sm lg:leading-6 relative">
-            <div class="pointer-events-none">
-              <div class="pointer-events-auto py-7">
-                <div class="mb-4">
-                  <a
-                    href="#"
-                    class="flex py-2 pl-1 border-b border-slate-900/10 dark:border-slate-300/10 rounded hover:bg-slate-300 dark:hover:bg-slate-300/10 text-base"
-                  >
-                    <span class="shadow-2xl"
-                      ><i class="fa-solid fa-user-circle text-2xl mr-2"></i
-                    ></span>
-                    <span>Administrator</span>
-                  </a>
-                </div>
-
-                <button
-                  type="button"
-                  class="w-full flex items-center text-sm leading-6 text-white rounded-md ring-1 ring-slate-900/10 shadow-sm py-1.5 pl-2 pr-3 hover:ring-slate-300 bg-slate-600 hover:bg-slate-800 dark:bg-slate-700 highlight-white/5"
+            <div class="py-7">
+              <div class="mb-4">
+                <a
+                  href="#"
+                  class="flex py-2 pl-1 border-b border-slate-900/10 dark:border-slate-300/10 rounded hover:bg-slate-300 dark:hover:bg-slate-300/10 text-base"
                 >
-                  <i class="fas fa-search mr-3 flex-none"></i>
-                  Quick search...
-                </button>
+                  <span class="shadow-2xl"
+                    ><i class="fa-solid fa-user-circle text-2xl mr-2"></i
+                  ></span>
+                  <span>Administrator</span>
+                </a>
               </div>
+
+              <button
+                type="button"
+                class="w-full flex items-center text-sm leading-6 text-white rounded-md ring-1 ring-slate-900/10 shadow-sm py-1.5 pl-2 pr-3 hover:ring-slate-300 bg-slate-600 hover:bg-slate-800 dark:bg-slate-700 highlight-white/5"
+              >
+                <i class="fas fa-search mr-3 flex-none"></i>
+                Quick search...
+              </button>
             </div>
 
             <ul
@@ -426,9 +424,7 @@
               </div>
             </section>
 
-            <section
-              class="bg-white dark:bg-white/5 rounded shadow-lg p-3"
-            >
+            <section class="bg-white dark:bg-white/5 rounded shadow-lg p-3">
               <h2
                 data-docsearch-ignore="true"
                 class="text-slate-900 text-xl tracking-tight font-semibold mb-3 dark:text-slate-200"
