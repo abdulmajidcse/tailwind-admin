@@ -319,7 +319,7 @@
         >
           <main class="pt-5">
             <!-- main content header -->
-            <div class="md:flex md:justify-between mb-10">
+            <div class="md:flex md:justify-between mb-6">
               <div>
                 <h1
                   class="text-3xl sm:text-4xl text-slate-900 tracking-tight dark:text-slate-200"
@@ -338,8 +338,71 @@
             </div>
             <!-- end of main content header -->
 
-            <section class="mb-4">
+            <section class="mb-5">
               <div class="flex flex-wrap">
+                <div class="w-full lg:w-6/12 xl:w-3/12">
+                  <div
+                    class="relative flex flex-col min-w-0 break-words bg-white dark:bg-white/5 rounded mb-6 xl:mb-0 shadow-lg mr-0 lg:mr-4"
+                  >
+                    <div class="flex-auto p-3">
+                      <div class="flex flex-wrap">
+                        <div
+                          class="text-white px-6 py-5 shadow-lg rounded bg-blue-500"
+                        >
+                          <i class="fas fa-users text-lg"></i>
+                        </div>
+
+                        <div class="ml-2">
+                          <h5 class="mb-3 font-semibold">Total Users</h5>
+                          <p class="font-bold">450,890</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full lg:w-6/12 xl:w-3/12">
+                  <div
+                    class="relative flex flex-col min-w-0 break-words bg-white dark:bg-white/5 rounded mb-6 xl:mb-0 shadow-lg mr-0 xl:mr-4"
+                  >
+                    <div class="flex-auto p-3">
+                      <div class="flex flex-wrap">
+                        <div
+                          class="text-white px-6 py-5 shadow-lg rounded bg-yellow-500"
+                        >
+                          <i class="fas fa-images text-lg"></i>
+                        </div>
+
+                        <div class="ml-2">
+                          <h5 class="mb-3 font-semibold">Total Posts</h5>
+                          <p class="font-bold">120</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full lg:w-6/12 xl:w-3/12">
+                  <div
+                    class="relative flex flex-col min-w-0 break-words bg-white dark:bg-white/5 rounded mb-6 xl:mb-0 shadow-lg mr-0 lg:mr-4"
+                  >
+                    <div class="flex-auto p-3">
+                      <div class="flex flex-wrap">
+                        <div
+                          class="text-white px-6 py-5 shadow-lg rounded bg-red-500"
+                        >
+                          <i class="fas fa-heart text-lg"></i>
+                        </div>
+
+                        <div class="ml-2">
+                          <h5 class="mb-3 font-semibold">Reactions</h5>
+                          <p class="font-bold">3370</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="w-full lg:w-6/12 xl:w-3/12">
                   <div
                     class="relative flex flex-col min-w-0 break-words bg-white dark:bg-white/5 rounded mb-6 xl:mb-0 shadow-lg"
@@ -347,21 +410,25 @@
                     <div class="flex-auto p-3">
                       <div class="flex flex-wrap">
                         <div
-                          class="text-white px-6 py-5 shadow-lg rounded bg-red-500"
+                          class="text-white px-6 py-5 shadow-lg rounded bg-green-500"
                         >
-                          <i class="far fa-chart-bar text-lg"></i>
+                          <i class="fas fa-comments text-lg"></i>
                         </div>
 
-                        <div class="font-semibold ml-2">
-                          <h5 class="mb-3">Traffic</h5>
-                          <p>350,897</p>
+                        <div class="ml-2">
+                          <h5 class="mb-3 font-semibold">Comments</h5>
+                          <p class="font-bold">1040</p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </section>
 
+            <section
+              class="bg-white dark:bg-white/5 rounded shadow-lg p-3"
+            >
               <h2
                 data-docsearch-ignore="true"
                 class="text-slate-900 text-xl tracking-tight font-semibold mb-3 dark:text-slate-200"
@@ -369,216 +436,165 @@
                 User List
               </h2>
 
-              <div class="mb-16 prose prose-slate dark:prose-dark">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Search here..."
-                  class="w-full"
-                />
+              <input
+                type="text"
+                name="name"
+                placeholder="Search here..."
+                class="w-full mb-6"
+              />
 
-                <div class="overflow-x-auto shadow-sm my-8">
-                  <table class="border-collapse table-auto w-full">
-                    <thead>
-                      <tr>
-                        <th
-                          class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
-                        >
-                          ID
-                        </th>
-                        <th
-                          class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
-                        >
-                          User
-                        </th>
-                        <th
-                          class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
-                        >
-                          Date
-                        </th>
-                        <th
-                          class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
-                        >
-                          Status
-                        </th>
-                        <th
-                          class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
-                        >
-                          Reason
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          183
-                        </td>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          John Doe
-                        </td>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          11-7-2014
-                        </td>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          <span class="text-purple-600">Approved</span>
-                        </td>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          Bacon ipsum dolor sit amet salami venison chicken
-                          flank fatback doner.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          219
-                        </td>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          Alexander Pierce
-                        </td>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          11-7-2014
-                        </td>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          <span class="text-yellow-400">Pending</span>
-                        </td>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          Bacon ipsum dolor sit amet salami venison chicken
-                          flank fatback doner.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          657
-                        </td>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          Bob Doe
-                        </td>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          11-7-2014
-                        </td>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          <span class="text-blue-500">Approved</span>
-                        </td>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          Bacon ipsum dolor sit amet salami venison chicken
-                          flank fatback doner.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          175
-                        </td>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          Mike Doe
-                        </td>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          11-7-2014
-                        </td>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          <span class="text-red-500">Denied</span>
-                        </td>
-                        <td
-                          class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                        >
-                          Bacon ipsum dolor sit amet salami venison chicken
-                          flank fatback doner.
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Blanditiis odit placeat animi natus similique non odio at
-                  cumque hic facilis optio quo, maiores eveniet eligendi sunt
-                  quisquam harum possimus doloribus! Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit. Voluptatem cumque aliquam
-                  pariatur, nihil aut magnam repudiandae ducimus ratione placeat
-                  commodi voluptate et officiis rerum esse delectus minima! A,
-                  perferendis dignissimos. Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit. Magnam deserunt ullam nobis
-                  distinctio, id culpa placeat debitis fuga, at eligendi
-                  consectetur quisquam asperiores! Reiciendis vero explicabo
-                  eaque laborum possimus soluta? Lorem, ipsum dolor sit amet
-                  consectetur adipisicing elit. Explicabo, excepturi vero.
-                  Veniam in non sit consequatur tempore enim quidem ut labore
-                  iusto, sapiente eos fuga inventore architecto itaque
-                  voluptatum repellat.
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Blanditiis odit placeat animi natus similique non odio at
-                  cumque hic facilis optio quo, maiores eveniet eligendi sunt
-                  quisquam harum possimus doloribus!
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Blanditiis odit placeat animi natus similique non odio at
-                  cumque hic facilis optio quo, maiores eveniet eligendi sunt
-                  quisquam harum possimus doloribus!
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Blanditiis odit placeat animi natus similique non odio at
-                  cumque hic facilis optio quo, maiores eveniet eligendi sunt
-                  quisquam harum possimus doloribus!
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Blanditiis odit placeat animi natus similique non odio at
-                  cumque hic facilis optio quo, maiores eveniet eligendi sunt
-                  quisquam harum possimus doloribus!
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Blanditiis odit placeat animi natus similique non odio at
-                  cumque hic facilis optio quo, maiores eveniet eligendi sunt
-                  quisquam harum possimus doloribus!
-                </p>
+              <div class="overflow-x-auto shadow-sm">
+                <table class="border-collapse table-auto w-full">
+                  <thead>
+                    <tr>
+                      <th
+                        class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
+                      >
+                        ID
+                      </th>
+                      <th
+                        class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
+                      >
+                        User
+                      </th>
+                      <th
+                        class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
+                      >
+                        Date
+                      </th>
+                      <th
+                        class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
+                      >
+                        Status
+                      </th>
+                      <th
+                        class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
+                      >
+                        Reason
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        183
+                      </td>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        John Doe
+                      </td>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        11-7-2014
+                      </td>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        <span class="text-purple-600">Approved</span>
+                      </td>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        Bacon ipsum dolor sit amet salami venison chicken flank
+                        fatback doner.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        219
+                      </td>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        Alexander Pierce
+                      </td>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        11-7-2014
+                      </td>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        <span class="text-yellow-400">Pending</span>
+                      </td>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        Bacon ipsum dolor sit amet salami venison chicken flank
+                        fatback doner.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        657
+                      </td>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        Bob Doe
+                      </td>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        11-7-2014
+                      </td>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        <span class="text-blue-500">Approved</span>
+                      </td>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        Bacon ipsum dolor sit amet salami venison chicken flank
+                        fatback doner.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        175
+                      </td>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        Mike Doe
+                      </td>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        11-7-2014
+                      </td>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        <span class="text-red-500">Denied</span>
+                      </td>
+                      <td
+                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                      >
+                        Bacon ipsum dolor sit amet salami venison chicken flank
+                        fatback doner.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </section>
           </main>
 
           <footer
-            class="font-semibold leading-6 mt-16 border-t border-slate-300 dark:border-slate-200/5"
+            class="font-semibold leading-6 mt-14 border-t border-slate-300 dark:border-slate-200/5"
           >
             <div class="py-6 sm:flex justify-between text-slate-600">
               <div class="mb-6 sm:mb-0 sm:flex">
