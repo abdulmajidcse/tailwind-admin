@@ -32,7 +32,7 @@
           >
             <div>
               <span
-                class="mr-4"
+                class="mr-4 rounded hover:bg-blue-800 hover:p-1 hover:text-white transition-all duration-300"
                 role="button"
                 title="Sidebar Menu"
                 @click="$store.sidebar.toggle()"
@@ -40,15 +40,26 @@
                 <i class="fa-solid fa-bars"></i>
               </span>
 
-              <span class="mr-4" role="button" title="Visit site">
+              <span
+                class="mr-4 rounded hover:bg-blue-800 hover:p-1 hover:text-white transition-all duration-300"
+                role="button"
+                title="Visit site"
+              >
                 <i class="fa-solid fa-home"></i>
               </span>
 
-              <span class="mr-4" role="button" title="Search">
+              <span
+                class="mr-4 rounded hover:bg-blue-800 hover:p-1 hover:text-white transition-all duration-300"
+                role="button"
+                title="Search"
+              >
                 <i class="fa-solid fa-search"></i>
               </span>
 
-              <span class="mr-4" role="button">
+              <span
+                class="mr-4 rounded hover:bg-blue-800 hover:p-1 hover:text-white transition-all duration-300"
+                role="button"
+              >
                 <span
                   id="dark_theme"
                   class="hidden"
@@ -100,7 +111,9 @@
                 <!-- main menu links -->
               </li>
               <li class="pb-3 lg:pb-0">
-                <a href="#" class="p-2"
+                <a
+                  href="#"
+                  class="p-2 rounded hover:bg-blue-800 hover:text-white"
                   ><i class="fa-solid fa-message"></i> Messages</a
                 >
               </li>
@@ -110,23 +123,33 @@
                 x-data="{ open: false }"
                 @click.outside="open = false"
               >
-                <a href="#" @click="open = !open" class="p-2">
+                <a
+                  href="#"
+                  @click="open = !open"
+                  class="p-2 rounded hover:bg-blue-800 hover:text-white"
+                >
                   <i class="fa-solid fa-user-circle"></i> Profile</a
                 >
                 <!-- dropdown menu -->
                 <ul
-                  class="bg-slate-800 dark:bg-slate-200 dark:highlight-white/5 text-white/80 dark:text-black p-2 ml-2 rounded lg:absolute z-0 lg:z-50 min-w-fit mt-2 lg:mt-4 lg:w-20 lg:right-1"
+                  class="bg-slate-800 dark:bg-slate-200 dark:highlight-white/5 text-white/80 dark:text-black p-2 ml-2 rounded lg:absolute z-0 lg:z-50 min-w-fit mt-2 lg:mt-4 lg:w-32 lg:right-1"
                   x-show="open"
                 >
                   <li
                     class="border-b border-slate-500 dark:border-slate-900/10"
                   >
-                    <a href="#" class="block mb-2 px-2 py-1">
+                    <a
+                      href="#"
+                      class="block my-1 px-2 py-1 rounded hover:bg-blue-800 hover:text-white"
+                    >
                       <i class="fa-solid fa-user"></i> Profile
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="block px-2 py-1">
+                    <a
+                      href="#"
+                      class="block my-1 px-2 py-1 rounded hover:bg-blue-800 hover:text-white"
+                    >
                       <i class="fa-solid fa-lock"></i> Log Out
                     </a>
                   </li>
@@ -154,15 +177,15 @@
           <nav class="lg:text-sm lg:leading-6 relative">
             <div class="pointer-events-none">
               <div class="pointer-events-auto py-7">
-                <div class="mb-4 ml-1">
+                <div class="mb-4">
                   <a
                     href="#"
-                    class="flex py-2 border-b border-slate-900/10 dark:border-slate-300/10"
+                    class="flex py-2 pl-1 border-b border-slate-900/10 dark:border-slate-300/10 rounded hover:bg-slate-300 dark:hover:bg-slate-300/10"
                   >
                     <span class="shadow-2xl"
                       ><i class="fa-solid fa-user-circle text-2xl mr-2"></i
                     ></span>
-                    <span class="font-semibold pb-3">Administrator</span>
+                    <span class="font-semibold">Administrator</span>
                   </a>
                 </div>
 
@@ -182,7 +205,7 @@
               <li class="mb-1">
                 <a
                   href="#"
-                  class="group flex items-center lg:leading-6 text-white text-base bg-blue-500 rounded p-2"
+                  class="group flex items-center lg:leading-6 text-white text-base bg-blue-800 rounded p-2"
                   ><div class="mr-2 shadow-sm dark:highlight-white/10">
                     <i class="fas fa-th"></i>
                   </div>
