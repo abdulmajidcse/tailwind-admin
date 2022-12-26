@@ -48,40 +48,65 @@
                   title="Sidebar Menu"
                   type="button"
                   class="inline-flex items-center p-2 text-base text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                  data-tooltip-target="sidebar-menu-tooltip"
                   @click="$store.sidebar.toggle()"
                 >
-                  <span class="sr-only">Open sidebar menu</span>
+                  <span class="sr-only">Sidebar menu</span>
                   <i class="fa-solid fa-bars"></i>
                 </button>
+                <div
+                  id="sidebar-menu-tooltip"
+                  role="tooltip"
+                  class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
+                >
+                  Sidebar menu
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
               </li>
 
               <li>
                 <a
                   href="#"
-                  title="Visit site"
+                  data-tooltip-target="visit-site-tooltip"
                   class="inline-flex items-center p-2 text-base text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 >
                   <span class="sr-only">Visit site</span>
                   <i class="fa-solid fa-home"></i>
                 </a>
+                <div
+                  id="visit-site-tooltip"
+                  role="tooltip"
+                  class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
+                >
+                  Visit site
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
               </li>
 
               <li>
                 <button
-                  title="Search"
                   type="button"
                   class="inline-flex items-center p-2 text-base text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                  data-tooltip-target="search-tooltip"
                 >
                   <span class="sr-only">Search</span>
                   <i class="fa-solid fa-search"></i>
                 </button>
+                <div
+                  id="search-tooltip"
+                  role="tooltip"
+                  class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
+                >
+                  Search here
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
               </li>
 
               <li>
                 <button
                   id="dark_theme"
                   onclick="setTheme('dark')"
-                  title="Switch to dark theme"
+                  data-tooltip-target="dark-theme-tooltip"
                   type="button"
                   class="inline-flex items-center p-2 text-base text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 >
@@ -90,11 +115,19 @@
                     class="fa-solid fa-moon text-gray-500 dark:text-gray-400"
                   ></i>
                 </button>
+                <div
+                  id="dark-theme-tooltip"
+                  role="tooltip"
+                  class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
+                >
+                  Switch to dark theme
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
 
                 <button
                   id="light_theme"
                   onclick="setTheme('light')"
-                  title="Switch to light theme"
+                  data-tooltip-target="light-theme-tooltip"
                   type="button"
                   class="inline-flex items-center p-2 text-base text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 >
@@ -103,19 +136,35 @@
                     class="fa-solid fa-sun text-gray-500 dark:text-gray-400"
                   ></i>
                 </button>
+                <div
+                  id="light-theme-tooltip"
+                  role="tooltip"
+                  class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
+                >
+                  Switch to light theme
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
               </li>
 
               <!-- mobile menu toggle button -->
               <li class="lg:hidden">
                 <button
-                  title="Topbar Menu"
+                  data-tooltip-target="topbar-menu-tooltip"
                   type="button"
                   class="inline-flex items-center p-2 text-base text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                   @click="mobileMenuOpen = !mobileMenuOpen"
                 >
-                  <span class="sr-only">Open topbar menu</span>
+                  <span class="sr-only">Topbar menu</span>
                   <i class="fa-solid fa-circle-chevron-down"></i>
                 </button>
+                <div
+                  id="topbar-menu-tooltip"
+                  role="tooltip"
+                  class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
+                >
+                  Topbar menu
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
               </li>
             </ul>
 
