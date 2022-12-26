@@ -590,19 +590,9 @@
                   href="#"
                   class="group flex items-center lg:leading-6 text-white text-base bg-blue-800 rounded p-2"
                   ><div class="mr-2 shadow-sm dark:highlight-white/10">
-                    <i class="fa-solid fa-gauge"></i>
+                    <i class="fa-solid fa-grip text-lg"></i>
                   </div>
                   Dashboard</a
-                >
-              </li>
-              <li class="mb-1">
-                <a
-                  href="#"
-                  class="group flex items-center lg:leading-6 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300 text-base rounded p-2 hover:bg-gray-300 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
-                  ><div class="mr-2 shadow-sm dark:highlight-white/10">
-                    <i class="fas fa-copy"></i>
-                  </div>
-                  Category</a
                 >
               </li>
               <li x-data="{ open: false }" class="mb-1">
@@ -613,7 +603,7 @@
                   @click="open = !open"
                 >
                   <div class="mr-2 shadow-sm dark:highlight-white/10">
-                    <i class="fas fa-copy"></i>
+                    <i class="fa-solid fa-file-lines text-lg"></i>
                   </div>
                   Pages
                   <i
@@ -685,11 +675,15 @@
               <li class="mb-1">
                 <a
                   href="#"
-                  class="group flex items-center lg:leading-6 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300 text-base rounded p-2 hover:bg-gray-300 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+                  class="group flex items-center lg:leading-6 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300 text-base rounded p-2 hover:bg-gray-300 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 relative"
                   ><div class="mr-2 shadow-sm dark:highlight-white/10">
-                    <i class="fas fa-users"></i>
+                    <i class="fa-solid fa-pen-to-square text-lg"></i>
                   </div>
-                  User List</a
+                  Forms
+                  <span
+                    class="bg-red-600 dark:bg-red-800 text-white/80 dark:text-white/50 text-sm font-semibold px-2 py-0.5 rounded absolute right-2"
+                    >New</span
+                  ></a
                 >
               </li>
             </ul>
