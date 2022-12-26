@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./dist/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="./dist/fontawesome/css/all.min.css" />
-    <script src="./dist/alpinejs@3.10.5/alpinejs.min.js"></script>
-    <script src="./dist/js/alpine-store.js"></script>
   </head>
   <body>
+    <script src="./dist/alpinejs@3.10.5/alpinejs.min.js"></script>
+    <script src="./dist/js/alpine-store.js"></script>
+
     <div
       class="dark:bg-slate-800 dark:highlight-white/5 dark:text-slate-400 min-h-screen"
     >
@@ -351,8 +352,8 @@
                         </div>
 
                         <div class="ml-2">
-                          <h5 class="mb-3 font-semibold">Total Users</h5>
-                          <p class="font-bold">450,890</p>
+                          <h5 class="mb-3 font-semibold">New Users</h5>
+                          <p class="font-bold">450</p>
                         </div>
                       </div>
                     </div>
@@ -368,12 +369,12 @@
                         <div
                           class="text-white px-6 py-5 shadow-lg rounded bg-yellow-500"
                         >
-                          <i class="fas fa-images text-lg"></i>
+                        <i class="fa-solid fa-cart-shopping text-lg"></i>
                         </div>
 
                         <div class="ml-2">
-                          <h5 class="mb-3 font-semibold">Total Posts</h5>
-                          <p class="font-bold">120</p>
+                          <h5 class="mb-3 font-semibold">Total Products</h5>
+                          <p class="font-bold">5045</p>
                         </div>
                       </div>
                     </div>
@@ -389,12 +390,12 @@
                         <div
                           class="text-white px-6 py-5 shadow-lg rounded bg-red-500"
                         >
-                          <i class="fas fa-heart text-lg"></i>
+                        <i class="fa-solid fa-bag-shopping text-lg"></i>
                         </div>
 
                         <div class="ml-2">
-                          <h5 class="mb-3 font-semibold">Reactions</h5>
-                          <p class="font-bold">3370</p>
+                          <h5 class="mb-3 font-semibold">New Orders</h5>
+                          <p class="font-bold">370</p>
                         </div>
                       </div>
                     </div>
@@ -410,11 +411,11 @@
                         <div
                           class="text-white px-6 py-5 shadow-lg rounded bg-green-500"
                         >
-                          <i class="fas fa-comments text-lg"></i>
+                          <i class="fa-solid fa-truck-fast text-lg"></i>
                         </div>
 
                         <div class="ml-2">
-                          <h5 class="mb-3 font-semibold">Comments</h5>
+                          <h5 class="mb-3 font-semibold">Sales</h5>
                           <p class="font-bold">1040</p>
                         </div>
                       </div>
@@ -429,7 +430,7 @@
                 data-docsearch-ignore="true"
                 class="text-slate-900 text-xl tracking-tight font-semibold mb-3 dark:text-slate-200"
               >
-                User List
+                Product List
               </h2>
 
               <input
@@ -439,149 +440,57 @@
                 class="w-full mb-6"
               />
 
-              <div class="overflow-x-auto shadow-sm">
-                <table class="border-collapse table-auto w-full">
-                  <thead>
+              <div class="overflow-x-auto relative">
+                <table
+                  class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+                >
+                  <thead
+                    class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+                  >
                     <tr>
-                      <th
-                        class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
-                      >
-                        ID
-                      </th>
-                      <th
-                        class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
-                      >
-                        User
-                      </th>
-                      <th
-                        class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
-                      >
-                        Date
-                      </th>
-                      <th
-                        class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
-                      >
-                        Status
-                      </th>
-                      <th
-                        class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left"
-                      >
-                        Reason
-                      </th>
+                      <th scope="col" class="py-3 px-6">Product name</th>
+                      <th scope="col" class="py-3 px-6">Color</th>
+                      <th scope="col" class="py-3 px-6">Category</th>
+                      <th scope="col" class="py-3 px-6">Price</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                    <tr
+                      class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                    >
+                      <th
+                        scope="row"
+                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                       >
-                        183
-                      </td>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                      >
-                        John Doe
-                      </td>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                      >
-                        11-7-2014
-                      </td>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                      >
-                        <span class="text-purple-600">Approved</span>
-                      </td>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                      >
-                        Bacon ipsum dolor sit amet salami venison chicken flank
-                        fatback doner.
-                      </td>
+                        Apple MacBook Pro 17"
+                      </th>
+                      <td class="py-4 px-6">Sliver</td>
+                      <td class="py-4 px-6">Laptop</td>
+                      <td class="py-4 px-6">$2999</td>
                     </tr>
-                    <tr>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                    <tr
+                      class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                    >
+                      <th
+                        scope="row"
+                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                       >
-                        219
-                      </td>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                      >
-                        Alexander Pierce
-                      </td>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                      >
-                        11-7-2014
-                      </td>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                      >
-                        <span class="text-yellow-400">Pending</span>
-                      </td>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                      >
-                        Bacon ipsum dolor sit amet salami venison chicken flank
-                        fatback doner.
-                      </td>
+                        Microsoft Surface Pro
+                      </th>
+                      <td class="py-4 px-6">White</td>
+                      <td class="py-4 px-6">Laptop PC</td>
+                      <td class="py-4 px-6">$1999</td>
                     </tr>
-                    <tr>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                    <tr class="bg-white dark:bg-gray-800">
+                      <th
+                        scope="row"
+                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                       >
-                        657
-                      </td>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                      >
-                        Bob Doe
-                      </td>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                      >
-                        11-7-2014
-                      </td>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                      >
-                        <span class="text-blue-500">Approved</span>
-                      </td>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                      >
-                        Bacon ipsum dolor sit amet salami venison chicken flank
-                        fatback doner.
-                      </td>
-                    </tr>
-                    <tr>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                      >
-                        175
-                      </td>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                      >
-                        Mike Doe
-                      </td>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                      >
-                        11-7-2014
-                      </td>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                      >
-                        <span class="text-red-500">Denied</span>
-                      </td>
-                      <td
-                        class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
-                      >
-                        Bacon ipsum dolor sit amet salami venison chicken flank
-                        fatback doner.
-                      </td>
+                        Magic Mouse 2
+                      </th>
+                      <td class="py-4 px-6">Black</td>
+                      <td class="py-4 px-6">Accessories</td>
+                      <td class="py-4 px-6">$99</td>
                     </tr>
                   </tbody>
                 </table>
@@ -831,5 +740,6 @@
 
     <script src="./dist/js/theme.js"></script>
     <script src="./dist//js/sidebar.js"></script>
+    <script src="./dist/js/flowbite.js"></script>
   </body>
 </html>
