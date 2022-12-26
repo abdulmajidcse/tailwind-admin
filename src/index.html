@@ -91,7 +91,7 @@
 
             <!-- mobile menu display blur wrapper -->
             <div
-              class="min-h-screen w-full fixed top-0 left-0 z-10 lg:hidden bg-black/20 backdrop-blur-sm dark:bg-slate-900/80"
+              class="min-h-screen w-full fixed top-0 left-0 z-20 lg:hidden bg-black/20 backdrop-blur-sm dark:bg-slate-900/80"
               :class="{ 'hidden' : !mobileMenuOpen }"
               @click="mobileMenuOpen = false"
             ></div>
@@ -165,7 +165,7 @@
       >
         <!-- mobile menu display blur wrapper in sidebar -->
         <div
-          class="min-h-screen w-full fixed top-0 left-0 z-10 lg:hidden bg-black/20 backdrop-blur-sm dark:bg-slate-900/80"
+          class="min-h-screen w-full fixed top-0 left-0 z-20 lg:hidden bg-black/20 backdrop-blur-sm dark:bg-slate-900/80"
           :class="!$store.sidebar.openIs && 'hidden'"
           @click="$store.sidebar.openIs = false"
         ></div>
