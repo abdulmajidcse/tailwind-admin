@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./src/dist/output.css --watch",
-    "build": "npx tailwindcss -i ./src/input.css -o ./src/dist/output.css --watch --minify"
+    "start": "npx tailwindcss -i ./src/tailwind.css -o ./src/dist/css/tailwind-admin.min.css --watch --minify"
   },
   "devDependencies": {
     "tailwind-scrollbar": "^2.0.1",
