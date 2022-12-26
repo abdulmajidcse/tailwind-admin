@@ -825,6 +825,28 @@
               </div>
             </section>
 
+            <section class="mb-5 flex flex-wrap">
+              <div class="overflow-hidden w-full lg:w-8/12 mb-5 lg:mb-0">
+                <div
+                  class="bg-white dark:bg-white/5 text-slate-800 dark:text-slate-100 shadow rounded-lg mr-0 lg:mr-3"
+                >
+                  <div class="py-3 px-5 bg-gray-100 dark:bg-gray-400/10">
+                    Sales Report
+                  </div>
+                  <canvas class="p-10" id="chartLine"></canvas>
+                </div>
+              </div>
+
+              <div
+                class="bg-white dark:bg-white/5 text-slate-800 dark:text-slate-100 shadow rounded-lg overflow-hidden w-full lg:w-4/12"
+              >
+                <div class="py-3 px-5 bg-gray-100 dark:bg-gray-400/10">
+                  Order Report
+                </div>
+                <canvas class="p-10" id="chartDoughnut"></canvas>
+              </div>
+            </section>
+
             <section
               class="bg-white dark:bg-white/5 rounded shadow-lg p-3 mb-5"
             >
@@ -1007,5 +1029,6 @@
 
     <!-- chartjs -->
     <script src="./dist/chartjs/chart.min.js"></script>
+    <script src="./dist/chartjs/dashboard-chart.js"></script>
   </body>
 </html>
