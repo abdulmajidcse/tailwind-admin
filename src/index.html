@@ -14,7 +14,7 @@
       class="dark:bg-slate-800 dark:highlight-white/5 dark:text-slate-400 min-h-screen"
     >
       <header
-        class="p-4 text-base border-b border-slate-900/10 dark:border-slate-300/10 sticky top-0 z-40 w-full flex-none lg:z-50 bg-white/95 dark:bg-slate-800 backdrop-blur"
+        class="p-4 text-base border-b border-slate-900/10 dark:border-slate-300/10 sticky top-0 z-40 w-full flex-none bg-white/95 dark:bg-slate-800 backdrop-blur"
       >
         <!-- navbar -->
         <nav class="flex justify-between mx-1">
@@ -88,6 +88,7 @@
                   type="button"
                   class="inline-flex items-center p-2 text-base text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                   data-tooltip-target="search-tooltip"
+                  data-modal-toggle="search-modal"
                 >
                   <span class="sr-only">Search</span>
                   <i class="fa-solid fa-search"></i>
@@ -521,6 +522,48 @@
         </nav>
       </header>
 
+      <!-- search modal -->
+      <div
+        id="search-modal"
+        tabindex="-1"
+        class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+      >
+        <div
+          class="relative h-full min-w-full sm:min-w-[90vw] md:min-w-[70vw] lg:min-w-[50vw]"
+        >
+          <div class="relative bg-white rounded shadow dark:bg-gray-700">
+            <button
+              type="button"
+              class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-600 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white z-10"
+              data-modal-toggle="search-modal"
+            >
+              <i class="fas fa-close text-lg"></i>
+              <span class="sr-only">Close modal</span>
+            </button>
+
+            <div class="relative bg-dark-700 pt-8 px-8 pb-16">
+              <div
+                class="relative w-full overflow-hidden transition-all duration-500 focus-within:border-gray-600"
+              >
+                <i
+                  class="fas fa-search absolute bottom-2 left-1 text-gray-500"
+                ></i>
+                <input
+                  type="text"
+                  class="flex-1 w-full pl-8 pr-4 py-1 tracking-wide text-gray-600 placeholder-gray-500 bg-transparent focus:outline-none border-0 border-b-2 border-gray-300 dark:border-gray-600 dark:focus:border-blue-500 focus:ring-0 focus:border-blue-600"
+                  placeholder="Search here"
+                />
+              </div>
+
+              <!-- search modal open message -->
+              <div class="mt-8 max-h-32 text-center">
+                <p>Enter a search term to find results.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div
         class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8 bg-slate-50 dark:bg-inherit"
       >
@@ -552,7 +595,7 @@
               <li class="mb-1">
                 <a
                   href="#"
-                  class="group flex items-center lg:leading-6 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300 text-base rounded p-2 hover:bg-gray-100 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+                  class="group flex items-center lg:leading-6 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300 text-base rounded p-2 hover:bg-gray-300 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
                   ><div class="mr-2 shadow-sm dark:highlight-white/10">
                     <i class="fas fa-copy"></i>
                   </div>
@@ -562,7 +605,7 @@
               <li x-data="{ open: false }" class="mb-1">
                 <a
                   href="#"
-                  class="group flex items-center lg:leading-6 relative rounded p-2 hover:bg-gray-100 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+                  class="group flex items-center lg:leading-6 relative rounded p-2 hover:bg-gray-300 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
                   :class="{ 'bg-slate-300 dark:bg-slate-300/10' : open }"
                   @click="open = !open"
                 >
@@ -580,7 +623,7 @@
                   <li>
                     <a
                       href="#"
-                      class="block mb-1 rounded p-2 hover:bg-gray-100 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+                      class="block mb-1 rounded p-2 hover:bg-gray-300 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
                     >
                       <i class="far fa-circle mr-2"></i> Blank
                     </a>
@@ -588,7 +631,7 @@
                   <li>
                     <a
                       href="#"
-                      class="block rounded p-2 hover:bg-gray-100 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+                      class="block rounded p-2 hover:bg-gray-300 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
                     >
                       <i class="far fa-circle mr-2"></i> Register
                     </a>
@@ -596,7 +639,7 @@
                   <li x-data="{ open: false }">
                     <a
                       href="#"
-                      class="block rounded p-2 hover:bg-gray-100 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 relative"
+                      class="block rounded p-2 hover:bg-gray-300 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 relative"
                       @click="open = !open"
                       :class="{ 'bg-slate-300 dark:bg-slate-300/10' : open }"
                     >
@@ -611,7 +654,7 @@
                       <li>
                         <a
                           href="#"
-                          class="block mb-1 rounded p-2 hover:bg-gray-100 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+                          class="block mb-1 rounded p-2 hover:bg-gray-300 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
                         >
                           <i class="far fa-dot-circle mr-2"></i> Sub Menu 1
                         </a>
@@ -619,7 +662,7 @@
                       <li>
                         <a
                           href="#"
-                          class="block rounded p-2 hover:bg-gray-100 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+                          class="block rounded p-2 hover:bg-gray-300 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
                         >
                           <i class="far fa-dot-circle mr-2"></i> Sub Menu 2
                         </a>
@@ -629,7 +672,7 @@
                   <li>
                     <a
                       href="#"
-                      class="block rounded p-2 hover:bg-gray-100 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+                      class="block rounded p-2 hover:bg-gray-300 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
                     >
                       <i class="far fa-circle mr-2"></i> Login
                     </a>
@@ -639,7 +682,7 @@
               <li class="mb-1">
                 <a
                   href="#"
-                  class="group flex items-center lg:leading-6 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300 text-base rounded p-2 hover:bg-gray-100 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+                  class="group flex items-center lg:leading-6 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300 text-base rounded p-2 hover:bg-gray-300 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
                   ><div class="mr-2 shadow-sm dark:highlight-white/10">
                     <i class="fas fa-users"></i>
                   </div>
