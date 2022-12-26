@@ -665,12 +665,28 @@
                 </h1>
               </div>
               <div class="mt-3 md:mt-0">
-                <ol class="flex">
-                  <li><a href="#" class="text-blue-500">Home</a></li>
-                  <li class="text-slate-500">
-                    <span class="mx-1">/</span>Dashboard
-                  </li>
-                </ol>
+                <nav class="flex" aria-label="Breadcrumb">
+                  <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                      <a
+                        href="#"
+                        class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+                      >
+                        <i class="fas fa-home"></i>
+                        <span class="ml-2">Home</span>
+                      </a>
+                    </li>
+                    <li aria-current="page">
+                      <div class="flex items-center">
+                        <i class="fa-solid fa-angle-right text-slate-400"></i>
+                        <span
+                          class="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400"
+                          >Dashboard</span
+                        >
+                      </div>
+                    </li>
+                  </ol>
+                </nav>
               </div>
             </div>
             <!-- end of main content header -->
