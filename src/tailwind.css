@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* sidebar top link active */
+  .sidebar .top-link.active {
+    @apply bg-blue-800 text-white;
+  }
+
+  /* sidebar sub link active */
+  .sidebar .sub-link.active {
+    @apply bg-slate-300 dark:bg-slate-300/10;
+  }
+}
