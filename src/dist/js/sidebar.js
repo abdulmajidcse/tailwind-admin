@@ -1,5 +1,5 @@
-function matchMediaForSidebar(width) {
-  if (width.matches) {
+function matchMediaForSidebar(e) {
+  if (e.matches) {
     // in lg screen
     Alpine.store("sidebar").openIs = true;
   } else {
@@ -9,7 +9,7 @@ function matchMediaForSidebar(width) {
 }
 
 const windowWidthLg = window.matchMedia("(min-width: 1024px)");
-windowWidthLg.addListener(matchMediaForSidebar);
+windowWidthLg.addEventListener("change", matchMediaForSidebar);
 
 window.addEventListener("load", function () {
   matchMediaForSidebar(windowWidthLg);
