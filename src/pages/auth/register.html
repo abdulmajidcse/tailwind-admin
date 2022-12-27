@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Tailwind Admin</title>
+    <link rel="stylesheet" href="./../../dist/css/tailwind-admin.min.css" />
+    <link rel="stylesheet" href="./../../dist/fontawesome/css/all.min.css" />
+  </head>
+  <body>
+    <div
+      class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900"
+    >
+      <!-- theme section -->
+      <div class="fixed top-4 right-4 md:top-10 md:right-10 z-20">
+        <button
+          id="dark_theme"
+          onclick="setTheme('dark')"
+          data-tooltip-target="dark-theme-tooltip"
+          type="button"
+          class="inline-flex items-center p-2 text-base text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        >
+          <span class="sr-only">Dark theme</span>
+          <i class="fa-solid fa-moon text-gray-500 dark:text-gray-400"></i>
+        </button>
+        <div
+          id="dark-theme-tooltip"
+          role="tooltip"
+          class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
+        >
+          Switch to dark theme
+          <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+
+        <button
+          id="light_theme"
+          onclick="setTheme('light')"
+          data-tooltip-target="light-theme-tooltip"
+          type="button"
+          class="inline-flex items-center p-2 text-base text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        >
+          <span class="sr-only">Light theme</span>
+          <i class="fa-solid fa-sun text-gray-500 dark:text-gray-400"></i>
+        </button>
+        <div
+          id="light-theme-tooltip"
+          role="tooltip"
+          class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
+        >
+          Switch to light theme
+          <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+      </div>
+
+      <div>
+        <a href="./../../index.html" class="flex items-center">
+          <i
+            class="fa-solid fa-layer-group text-4xl mr-2 text-blue-800"
+            title="Logo"
+          ></i>
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >Tailwind Admin</span
+          >
+        </a>
+      </div>
+
+      <div
+        class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg"
+      >
+        <form method="POST" action="">
+          <!-- Name -->
+          <div>
+            <label
+              class="block font-medium text-sm text-gray-700 dark:text-gray-300"
+              for="name"
+            >
+              Name
+            </label>
+            <input
+              class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm block mt-1 w-full"
+              id="name"
+              type="text"
+              name="name"
+              required="required"
+              autofocus="autofocus"
+            />
+          </div>
+
+          <!-- Email Address -->
+          <div class="mt-4">
+            <label
+              class="block font-medium text-sm text-gray-700 dark:text-gray-300"
+              for="email"
+            >
+              Email
+            </label>
+            <input
+              class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm block mt-1 w-full"
+              id="email"
+              type="email"
+              name="email"
+              required="required"
+            />
+          </div>
+
+          <!-- Password -->
+          <div class="mt-4">
+            <label
+              class="block font-medium text-sm text-gray-700 dark:text-gray-300"
+              for="password"
+            >
+              Password
+            </label>
+
+            <input
+              class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm block mt-1 w-full"
+              id="password"
+              type="password"
+              name="password"
+              required="required"
+              autocomplete="new-password"
+            />
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="mt-4">
+            <label
+              class="block font-medium text-sm text-gray-700 dark:text-gray-300"
+              for="password_confirmation"
+            >
+              Confirm Password
+            </label>
+
+            <input
+              class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm block mt-1 w-full"
+              id="password_confirmation"
+              type="password"
+              name="password_confirmation"
+              required="required"
+            />
+          </div>
+
+          <div class="mt-4">
+            <label for="agree_terms" class="inline-flex items-center">
+              <input
+                id="agree_terms"
+                type="checkbox"
+                class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800"
+                name="agree_terms"
+              />
+              <span class="ml-2 text-sm text-gray-600 dark:text-gray-400"
+                >I agree to your
+                <a href="#" class="text-blue-800 dark:text-blue-400 hover:underline">Terms</a>,
+                <a href="#" class="text-blue-800 dark:text-blue-400 hover:underline"
+                  >Privacy Policy</a
+                >
+                and
+                <a href="#" class="text-blue-800 dark:text-blue-400 hover:underline"
+                  >Cookies Policy</a
+                ></span
+              >
+            </label>
+          </div>
+
+          <div class="flex items-center justify-end mt-4">
+            <a
+              class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+              href="./login.html"
+            >
+              Already registered?
+            </a>
+
+            <button
+              type="submit"
+              class="inline-flex items-center px-4 py-2 bg-blue-700 dark:bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-500 dark:hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150 ml-4"
+            >
+              Register
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./../../dist/js/theme.js"></script>
+    <script src="./../../dist/js/flowbite.js"></script>
+  </body>
+</html>
