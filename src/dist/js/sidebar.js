@@ -1,3 +1,12 @@
+document.addEventListener("alpine:init", () => {
+  Alpine.store("sidebar", {
+    openIs: true,
+    toggle() {
+      this.openIs = !this.openIs;
+    },
+  });
+});
+
 function matchMediaForSidebar(e) {
   if (e.matches) {
     // in lg screen

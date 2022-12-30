@@ -9,11 +9,10 @@
     <title>Dashboard - Tailwind Admin</title>
     <link href="./dist/css/tailwind-admin.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./dist/fontawesome/css/all.min.css" />
-  </head>
-  <body>
-    <script src="./dist/alpinejs@3.10.5/alpinejs.min.js"></script>
-    <script src="./dist/js/alpine-store.js"></script>
 
+    <script defer src="./dist/alpinejs@3.10.5/alpinejs.min.js"></script>
+  </head>
+  <body x-data>
     <div
       class="dark:bg-slate-800 dark:highlight-white/5 dark:text-slate-400 min-h-screen"
     >
@@ -53,7 +52,7 @@
                   type="button"
                   class="inline-flex items-center p-2 text-base text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                   data-tooltip-target="sidebar-menu-tooltip"
-                  @click="$store.sidebar.toggle()"
+                  x-on:click="$store.sidebar.toggle()"
                 >
                   <span class="sr-only">Sidebar menu</span>
                   <i class="fa-solid fa-bars"></i>
@@ -156,7 +155,7 @@
                 <button
                   type="button"
                   class="inline-flex items-center p-2 text-base text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                  @click="mobileMenuOpen = !mobileMenuOpen"
+                  x-on:click="mobileMenuOpen = !mobileMenuOpen"
                 >
                   <span class="sr-only">Topbar menu</span>
                   <i class="fa-solid fa-circle-chevron-down"></i>
@@ -168,7 +167,7 @@
             <div
               class="min-h-screen w-full fixed top-0 left-0 z-20 lg:hidden bg-black/20 backdrop-blur-sm dark:bg-slate-900/80"
               :class="{ 'hidden' : !mobileMenuOpen }"
-              @click="mobileMenuOpen = false"
+              x-on:click="mobileMenuOpen = false"
             ></div>
 
             <!-- main header menu -->
@@ -569,7 +568,7 @@
         <div
           class="min-h-screen w-full fixed top-0 left-0 z-20 lg:hidden bg-black/20 backdrop-blur-sm dark:bg-slate-900/80"
           :class="!$store.sidebar.openIs && 'hidden'"
-          @click="$store.sidebar.openIs = false"
+          x-on:click="$store.sidebar.openIs = false"
         ></div>
 
         <div
@@ -595,7 +594,7 @@
                   href="#"
                   class="sub-link flex items-center lg:leading-6 relative rounded p-2 hover:bg-gray-300 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
                   :class="{ 'active' : open }"
-                  @click="open = !open"
+                  x-on:click="open = !open"
                 >
                   <div class="mr-2 shadow-sm dark:highlight-white/10">
                     <i class="fa-solid fa-file-lines text-lg"></i>
@@ -621,7 +620,7 @@
                     <a
                       href="#"
                       class="sub-link block rounded p-2 hover:bg-gray-300 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 relative"
-                      @click="open = !open"
+                      x-on:click="open = !open"
                       :class="{ 'active' : open }"
                     >
                       <i class="far fa-circle mr-2"></i> Auth
@@ -1078,7 +1077,7 @@
     </div>
 
     <script src="./dist/js/theme.js"></script>
-    <script src="./dist//js/sidebar.js"></script>
+    <script src="./dist/js/sidebar.js"></script>
     <script src="./dist/js/flowbite.js"></script>
 
     <!-- chartjs -->
